@@ -20,12 +20,13 @@ for file in files:
         name = element.name.text
         element.remove(element.description)
         try:
-            code_object = KML.code(code[0])
+            d = KML.description(code[0])
+            # code_object = KML.code(code[0])
         except:
             no_code.write(name+"\n")
 
-        if code_object is not None:
-            element.append(code_object)
+        if d is not None:
+            element.append(d)
 
     filename = "clean/"+file.split('.')[0]+"c.kml"
     dir = os.path.dirname(filename)
