@@ -23,7 +23,7 @@ for file in files:
             d = KML.description(code[0])
             # code_object = KML.code(code[0])
         except:
-            no_code.write(name+"\n")
+            no_code.write(file+" "+name+"\n")
 
         if d is not None:
             element.append(d)
